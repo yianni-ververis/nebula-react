@@ -5,20 +5,10 @@ import embed from './configure';
 import connect from './connect';
 
 const nebulaPromise = async () => {
-  // const res = await fetch('https://localhost:8081/infos');
-  // const x = await res.json();
   const app = await connect({
-    // R&D Stag Cloud
-    // url: x.hostname,
-    // appId: x.appId,
-    // webIntegrationId: x.webId,
-    // Cloud Working
-    // url: 'showcase.eu.qlikcloud.com',
-    // appId: '54d244e3-757d-4982-8628-f945eb275551',
-    // webIntegrationId: 'EkckpfKS1k-4Hf6ybkPpnyowzZ5edilA',
-    // Prod Working
-    url: 'sense-demo.qlik.com',
-    appId: '133dab5d-8f56-4d40-b3e0-a6b401391bde',
+    // webIntegrationId: '',
+    url: '',
+    appId: '',
   });
   return embed(app);
 };
