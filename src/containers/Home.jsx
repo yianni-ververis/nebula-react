@@ -33,10 +33,6 @@ const Container = () => {
           <a href="#/line-chart/"><img src="assets/linechart.png" alt="linechart" className={classes.img} /></a>
         </Grid>
         <Grid item md={4} sm={6} xs={12}>
-          <h3>Combochart</h3>
-          <a href="#/combo-chart/"><img src="assets/combochart.png" alt="combochart" className={classes.img} /></a>
-        </Grid>
-        <Grid item md={4} sm={6} xs={12}>
           <h3>Piechart</h3>
           <a href="#/pie-chart/"><img src="assets/piechart.png" alt="piechart" className={classes.img} /></a>
         </Grid>
