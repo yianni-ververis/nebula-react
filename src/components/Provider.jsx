@@ -7,7 +7,6 @@ import connect from './connect';
 const nebulaPromise = async () => {
   // const res = await fetch('https://localhost:8081/infos');
   // const x = await res.json();
-  // console.log(x);
   const app = await connect({
     // R&D Stag Cloud
     // url: x.hostname,

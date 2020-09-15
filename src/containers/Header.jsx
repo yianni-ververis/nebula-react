@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'acumin-pro-extra-condensed',
     fontWeight: 700,
     paddingBottom: 10,
-    textTransform: 'uppercase',
+    textAlign: 'center',
+    // textTransform: 'uppercase',
     [theme.breakpoints.down('xs')]: {
       fontSize: '1.5rem',
     },
@@ -39,7 +40,10 @@ const Container = () => {
 
   return (
     <Grid container spacing={3}>
-      <Grid item sm={10} xs={12} className={classes.title}>
+      <Grid item xs={12} className={classes.title}>
+        Nebula.js & React template
+      </Grid>
+      <Grid item xs={12} className={classes.title}>
         <div ref={vizRef} />
       </Grid>
     </Grid>

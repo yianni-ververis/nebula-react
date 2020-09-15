@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useRef } from 'react';
 import GlobalsContext from '../components/Context';
+import styles from './styles';
 
 const Container = () => {
   const _GlobalsContext = useContext(GlobalsContext);
@@ -14,7 +15,6 @@ const Container = () => {
     _GlobalsContext.nebula.render({
       element: vis2Ref.current,
       type: 'pieChart',
-      // fields: ['Case Owner Group', '=Avg([Case Duration Time])'],
       properties: {
         qHyperCubeDef: {
           qDimensions: [
@@ -28,6 +28,10 @@ const Container = () => {
             qHeight: 100,
           }],
         },
+        showTitles: true,
+        title: 'Pie-chart',
+        subtitle: 'Sample supernova piechart',
+        footnote: '',
       },
     });
   };
@@ -41,7 +45,7 @@ const Container = () => {
       <div className="row">
         <div className="col-md-12">
           <div ref={vis1Ref} />
-          <div ref={vis2Ref} style={{ width: '100%', height: 400 }} />
+          <div ref={vis2Ref} style={styles.viz} />
         </div>
       </div>
     </div>

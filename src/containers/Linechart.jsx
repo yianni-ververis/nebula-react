@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useRef } from 'react';
 import GlobalsContext from '../components/Context';
+import styles from './styles';
 
 const Container = () => {
   const _GlobalsContext = useContext(GlobalsContext);
@@ -10,7 +11,7 @@ const Container = () => {
     // Selections
     const selections = await _GlobalsContext.nebula.selections();
     selections.mount(vis1Ref.current);
-    // Barchart
+    // Linechart
     _GlobalsContext.nebula.render({
       element: vis2Ref.current,
       type: 'lineChart',
@@ -24,6 +25,10 @@ const Container = () => {
           ],
           qInterColumnSortOrder: [1, 0],
         },
+        showTitles: true,
+        title: 'Line-chart',
+        subtitle: 'Sample supernova linechart',
+        footnote: '',
       },
     });
   };
@@ -37,7 +42,7 @@ const Container = () => {
       <div className="row">
         <div className="col-md-12">
           <div ref={vis1Ref} />
-          <div ref={vis2Ref} style={{ width: '100%', height: 400 }} />
+          <div ref={vis2Ref} style={styles.viz} />
         </div>
       </div>
     </div>

@@ -6,7 +6,6 @@ import pieChart from '@nebula.js/sn-pie-chart';
 import sankeyChart from '@nebula.js/sn-sankey-chart';
 import funneChart from '@nebula.js/sn-funnel-chart';
 import mekkoChart from '@nebula.js/sn-mekko-chart';
-import filterPane from '@nebula.js/sn-filterpane';
 
 const configure = embed.createConfiguration({
   context: {
@@ -19,10 +18,6 @@ const configure = embed.createConfiguration({
     },
   },
   types: [
-    {
-      name: 'filterPane',
-      load: () => filterPane,
-    },
     {
       name: 'barChart',
       load: () => barChart,

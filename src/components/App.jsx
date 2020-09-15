@@ -7,6 +7,8 @@ import Barchart from '../containers/Barchart';
 import Linechart from '../containers/Linechart';
 import Mekkochart from '../containers/Mekkochart';
 import PieChart from '../containers/PieChart';
+import FunnelChart from '../containers/FunnelChart';
+import SankeyChart from '../containers/SankeyChart';
 
 const App = () => (
   <div>
@@ -19,6 +21,8 @@ const App = () => (
           <Route exact path="/line-chart/" component={Linechart} />
           <Route exact path="/mekko-chart/" component={Mekkochart} />
           <Route exact path="/pie-chart/" component={PieChart} />
+          <Route exact path="/funnel-chart/" component={FunnelChart} />
+          <Route exact path="/sankey-chart/" component={SankeyChart} />
           <Route component={Home} />
         </Switch>
       </GlobalValuesProvider>
