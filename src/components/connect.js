@@ -2,7 +2,6 @@ import enigma from 'enigma.js';
 import schema from 'enigma.js/schemas/12.170.2.json';
 
 async function getQCSHeaders({ webIntegrationId, url }) {
-  console.log(url);
   const response = await fetch(`https://${url}/api/v1/csrf-token`, {
     credentials: 'include',
     headers: { 'qlik-web-integration-id': webIntegrationId },

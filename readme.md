@@ -6,6 +6,7 @@
 - npm install
 
 ## Usage
+- Add Qlik Sense server url, appId and webIntegrationId if you are using Qlik Sense Business or Qlik Sense Enterprise SaaS in the src/components/provider.
 - Run `npm run start` for a local preview.
 
 
